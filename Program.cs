@@ -23,9 +23,9 @@ namespace WebClienUploadingFiles
          // После этого можно использовать класс StreamReader для обработки потока
          if (str != null)
          {
-            var sr = new StreamReader(str);
+            StreamReader Reader = new StreamReader(str);
             string s;
-            while ((s = sr.ReadLine()) != null)
+            while ((s = Reader.ReadLine()) != null)
             {
                Console.WriteLine(s);
             }
