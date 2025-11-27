@@ -8,7 +8,7 @@ namespace WebClienUploadingFiles
    {
       static void Main()
       {
-         Console.WriteLine("Загрузка...Пожалуйста, подождите...");
+         Console.WriteLine("Загрузка...\nПожалуйста, подождите...");
          // Для загрузки файла используется класс WebClient
          WebClient wc = new WebClient();
          // Метод DownloadFile() принимает два параметра - первый это путь к файлу,
