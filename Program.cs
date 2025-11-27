@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 
@@ -8,6 +9,27 @@ namespace WebClienUploadingFiles
    {
       static void Main()
       {
+         using (var user = new WebClient())
+         {
+            // Данные для отправки
+            var data = new NameValueCollection
+            {
+               { "key1", "value1" },
+               { "key2", "value2" }
+            };
+
+            // Выполняем POST-запрос
+            byte[] responseBytes = user.UploadValues("https://httpbin.org/post", "POST", data);
+            string response = System.Text.Encoding.UTF8.GetString(responseBytes);
+            Console.WriteLine("POST Response: " + response);
+         }
+
+
+
+
+
+
+
          Console.WriteLine("Загрузка...\nПожалуйста, подождите...");
          // Для загрузки файла используется класс WebClient
          WebClient client = new WebClient();
@@ -30,6 +52,9 @@ namespace WebClienUploadingFiles
                Console.WriteLine(line);
             }
          }
+
+
+
 
          Console.ReadLine();
       }
