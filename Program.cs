@@ -24,12 +24,6 @@ namespace WebClienUploadingFiles
             Console.WriteLine("POST Response: " + response);
          }
 
-
-
-
-
-
-
          Console.WriteLine("Загрузка...\nПожалуйста, подождите...");
          // Для загрузки файла используется класс WebClient
          WebClient client = new WebClient();
