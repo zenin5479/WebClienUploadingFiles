@@ -17,8 +17,8 @@ namespace WebClienUploadingFiles
          Console.WriteLine("Загрузка завершена");
          // Получить вебстраницу в строку для последующей ее обработки
          // Cама процедура неэффективная - сначала загружаем страницу в файл, потом читаем текст из этого файла
-         // Гораздо удобнее использовать метод OpenRead().
-         var str = wc.OpenRead("https://www.google.ru");
+         // Гораздо удобнее использовать метод OpenRead()
+         Stream str = wc.OpenRead("https://www.google.ru");
          // Содержимое страницы будет загружено в переменную.
          // После этого можно использовать класс StreamReader для обработки потока.
          if (str != null)
@@ -26,7 +26,9 @@ namespace WebClienUploadingFiles
             var sr = new StreamReader(str);
             string s;
             while ((s = sr.ReadLine()) != null)
+            {
                Console.WriteLine(s);
+            }
          }
 
          Console.ReadLine();
