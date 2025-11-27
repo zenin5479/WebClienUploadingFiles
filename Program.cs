@@ -9,7 +9,7 @@ namespace WebClienUploadingFiles
    {
       static void Main()
       {
-         using (var user = new WebClient())
+         using (WebClient user = new WebClient())
          {
             // Данные для отправки
             var data = new NameValueCollection
