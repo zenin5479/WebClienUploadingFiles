@@ -47,9 +47,6 @@ namespace WebClienUploadingFiles
             }
          }
 
-
-
-
          Console.ReadLine();
       }
    }
