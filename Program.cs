@@ -10,7 +10,7 @@ namespace WebClienUploadingFiles
       {
          Console.WriteLine("Загрузка...Пожалуйста, подождите...");
          // Для загрузки файла используется класс WebClient.
-         var wc = new WebClient();
+         WebClient wc = new WebClient();
          // Метод DownloadFile() принимает два параметра - первый это путь к файлу,
          // который нужно скачать, а второй - локальное имя файла.
          wc.DownloadFile("https://www.google.ru", "UploadingFilesWebClient.txt");
